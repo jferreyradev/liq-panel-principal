@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <defs>
+    <linearGradient id="hubGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4f46e5"/>
+      <stop offset="100%" stop-color="#0ea5e9"/>
+    </linearGradient>
+    <linearGradient id="shine" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#ffffff" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#ffffff" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Background Squircle -->
+  <rect width="32" height="32" rx="8" fill="url(#hubGrad)" />
+  
+  <!-- Subtle glass shine on top half -->
+  <rect width="32" height="16" rx="8" fill="url(#shine)" />
+  
+  <!-- Inset border -->
+  <rect x="0.75" y="0.75" width="30.5" height="30.5" rx="7.25" fill="none" stroke="#ffffff" stroke-width="1" stroke-opacity="0.25" />
+
+  <!-- Bold Payroll Currency Glyph ($) -->
+  <path d="M16 6v20M20 10.5h-5.5a2.75 2.75 0 0 0 0 5.5h3a2.75 2.75 0 0 1 0 5.5H11.5" 
+        fill="none" 
+        stroke="#ffffff" 
+        stroke-width="3" 
+        stroke-linecap="round" 
+        stroke-linejoin="round" />
+        
+  <!-- Live Online Status Dot -->
+  <circle cx="26" cy="6" r="3.25" fill="#10b981" stroke="#0f172a" stroke-width="1.25" />
+</svg>

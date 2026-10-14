@@ -1,0 +1,48 @@
+[
+  {
+    "id": "dno-admin-bridge",
+    "title": "Liquid API Studio",
+    "description": "Consola de administración y bridge para Liquid API desplegado en Deno.",
+    "category": "operativa",
+    "url": "https://dno-admin-bridge.jferreyradev.deno.net",
+    "iconName": "Database",
+    "status": "online",
+    "tags": [
+      "Deno",
+      "API Studio",
+      "Admin Bridge"
+    ],
+    "lastUpdated": "Activo",
+    "isPinned": true
+  },
+  {
+    "id": "liq-panel-netlify",
+    "title": "Liq Panel",
+    "description": "Panel y módulo satélite de liquidación de sueldos alojado en Netlify.",
+    "category": "operativa",
+    "url": "https://liqpanel.netlify.app",
+    "iconName": "Calculator",
+    "status": "online",
+    "tags": [
+      "Netlify",
+      "Producción",
+      "Frontend"
+    ],
+    "lastUpdated": "Activo"
+  },
+  {
+    "id": "proj-1791997846386",
+    "title": "kv-admin.jferreyradev",
+    "description": "Proyecto satélite del ecosistema.",
+    "category": "operativa",
+    "url": "https://kv-admin.jferreyradev.deno.net",
+    "iconName": "Globe",
+    "status": "online",
+    "tags": [
+      "Satélite",
+      "Web"
+    ],
+    "lastUpdated": "Reciente",
+    "isCustom": true
+  }
+]
