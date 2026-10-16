@@ -6,7 +6,7 @@ import { StatsBar } from './components/StatsBar';
 import { ProjectGrid } from './components/ProjectGrid';
 import { Footer } from './components/Footer';
 
-const STORAGE_KEY = 'sueldoshub_satellite_projects_v5';
+const STORAGE_KEY = 'sueldoshub_satellite_projects_v7';
 
 export const App: React.FC = () => {
   const [projects, setProjects] = useState<ProjectItem[]>(() => {
@@ -15,7 +15,7 @@ export const App: React.FC = () => {
       if (saved) {
         const parsed = JSON.parse(saved);
         if (Array.isArray(parsed) && parsed.length > 0) {
-          return parsed;
+          return parsed.filter((p: ProjectItem) => p.id !== 'dev-admin' && p.port !== 5173);
         }
       }
     } catch {
@@ -35,9 +35,10 @@ export const App: React.FC = () => {
       })
       .then(data => {
         if (Array.isArray(data) && data.length > 0) {
-          setProjects(data);
+          const filtered = data.filter((p: ProjectItem) => p.id !== 'dev-admin' && p.port !== 5173);
+          setProjects(filtered);
           try {
-            localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+            localStorage.setItem(STORAGE_KEY, JSON.stringify(filtered));
           } catch {
             // ignore
           }

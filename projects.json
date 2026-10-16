@@ -1,16 +1,16 @@
 [
   {
-    "id": "dno-admin-bridge",
-    "title": "Liquid API Studio",
-    "description": "Consola de administración y bridge para Liquid API desplegado en Deno.",
+    "id": "liq-api-studio",
+    "title": "Liquid Studio",
+    "description": "Developer & Multi-Host Console para Liquid API alojado en Netlify.",
     "category": "operativa",
-    "url": "https://dno-admin-bridge.jferreyradev.deno.net",
+    "url": "https://liqapistudio.netlify.app/",
     "iconName": "Database",
     "status": "online",
     "tags": [
-      "Deno",
-      "API Studio",
-      "Admin Bridge"
+      "Netlify",
+      "Liquid Studio",
+      "Developer Console"
     ],
     "lastUpdated": "Activo",
     "isPinned": true
@@ -31,18 +31,18 @@
     "lastUpdated": "Activo"
   },
   {
-    "id": "proj-1791997846386",
-    "title": "kv-admin.jferreyradev",
-    "description": "Proyecto satélite del ecosistema.",
+    "id": "kv-admin",
+    "title": "KV Storage Admin",
+    "description": "Gestión centralizada de colecciones Deno KV, backends dinámicos, IPs de servidores y configuraciones municipales.",
     "category": "operativa",
     "url": "https://kv-admin.jferreyradev.deno.net",
     "iconName": "Globe",
     "status": "online",
     "tags": [
-      "Satélite",
-      "Web"
+      "Deno KV",
+      "Config Hub",
+      "Infraestructura"
     ],
-    "lastUpdated": "Reciente",
-    "isCustom": true
+    "lastUpdated": "Activo"
   }
 ]
