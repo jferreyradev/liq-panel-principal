@@ -1,14 +1,16 @@
 import React, { useState, useEffect } from 'react';
 import { INITIAL_PROJECTS } from './data/defaultProjects';
 import { ProjectItem } from './types';
+import { AuthProvider } from './context/AuthContext';
 import { Header } from './components/Header';
 import { StatsBar } from './components/StatsBar';
 import { ProjectGrid } from './components/ProjectGrid';
+import { LoginModal } from './components/LoginModal';
 import { Footer } from './components/Footer';
 
 const STORAGE_KEY = 'sueldoshub_satellite_projects_v7';
 
-export const App: React.FC = () => {
+const AppContent: React.FC = () => {
   const [projects, setProjects] = useState<ProjectItem[]>(() => {
     try {
       const saved = localStorage.getItem(STORAGE_KEY);
@@ -25,6 +27,7 @@ export const App: React.FC = () => {
   });
 
   const [searchQuery, setSearchQuery] = useState('');
+  const [isLoginModalOpen, setIsLoginModalOpen] = useState(false);
 
   // Load from disk (/api/projects) on mount
   useEffect(() => {
@@ -103,6 +106,7 @@ export const App: React.FC = () => {
         onSearchChange={setSearchQuery}
         activeCount={activeCount}
         totalCount={projects.length}
+        onOpenLogin={() => setIsLoginModalOpen(true)}
       />
 
       {/* Main Container */}
@@ -125,7 +129,21 @@ export const App: React.FC = () => {
         onImportProjects={handleImportProjects}
         onResetDefaults={handleResetDefaults}
       />
+
+      {/* Login Modal */}
+      <LoginModal
+        isOpen={isLoginModalOpen}
+        onClose={() => setIsLoginModalOpen(false)}
+      />
     </div>
+  );
+};
+
+export const App: React.FC = () => {
+  return (
+    <AuthProvider>
+      <AppContent />
+    </AuthProvider>
   );
 };
 
