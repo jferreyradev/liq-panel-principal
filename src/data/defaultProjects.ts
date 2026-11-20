@@ -2,20 +2,20 @@ import { ProjectItem } from '../types';
 
 export const INITIAL_PROJECTS: ProjectItem[] = [
   {
-    id: 'liq-api-studio',
-    title: 'Liquid Studio',
-    description: 'Developer & Multi-Host Console para Liquid API alojado en Netlify.',
+    id: 'liq-api-admin',
+    title: 'Admin API',
+    description: 'Developer & Admin Console para Liquid API alojada en Vercel.',
     category: 'operativa',
-    url: 'https://liqapistudio.netlify.app/',
+    url: 'https://api-liq-admin.vercel.app',
     iconName: 'Database',
     status: 'online',
-    tags: ['Netlify', 'Liquid Studio', 'Developer Console'],
+    tags: ['Vercel', 'Admin API', 'Developer Console'],
     lastUpdated: 'Activo',
     isPinned: true
   },
   {
     id: 'liq-panel-netlify',
-    title: 'Liq Panel',
+    title: 'Panel Liquidación',
     description: 'Panel y módulo satélite de liquidación de sueldos alojado en Netlify.',
     category: 'operativa',
     url: 'https://liqpanel.netlify.app',

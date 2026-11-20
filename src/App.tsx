@@ -8,7 +8,7 @@ import { ProjectGrid } from './components/ProjectGrid';
 import { LoginModal } from './components/LoginModal';
 import { Footer } from './components/Footer';
 
-const STORAGE_KEY = 'sueldoshub_satellite_projects_v7';
+const STORAGE_KEY = 'sueldoshub_satellite_projects_v8';
 
 const AppContent: React.FC = () => {
   const [projects, setProjects] = useState<ProjectItem[]>(() => {
